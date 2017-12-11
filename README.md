@@ -24,7 +24,8 @@ Programme.
 For making the app run consider the following steps:
 
 1. Download the zip file of the project or clone the project to your local machine.
-2. Type the following commands for the execution of the project
+2. Locate to the directory where the app is present and type "npm install" to install all the dependencies.
+3. Type the following commands for the execution of the project
     a) "yarn start" or "npm start" :
        To run the app using the expo by scanning the QR code in the mobile.
     b) "yarn run android" or "npm run android":
