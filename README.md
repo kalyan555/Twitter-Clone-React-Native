@@ -1,8 +1,8 @@
-###################################################################################################################
+***********************************
 
-Twitter Clone App for Hasura Product Development Fellowship Programme By React Native By Kalyan Reddy M.V.K
+# Twitter Clone App for Hasura Product Development Fellowship Programme By React Native By Kalyan Reddy M.V.K
 
-###################################################################################################################
+***********************************
 
 ***********************************
 # About The APP
