@@ -9,7 +9,7 @@ import home from './home';
 import Extra from './extra';
 import TabBarCompo from './TabBarCompo';
 import SearchScreen from './SearchScreen';
-import MessageScreen from './messages';
+import MessageScreen from './Messages';
 import Notifications from './notifications';
 
 // The tab screen for the different tabs that are to be used and theri router configuration
