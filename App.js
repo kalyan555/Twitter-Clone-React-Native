@@ -1,42 +1,30 @@
-import React, {Component} from 'react';
-import { StyleSheet, Text, View, Image} from 'react-native';
+import React, { Component } from "react";
+import { View } from "react-native";
+import { Container, Content, Picker, Button, Text } from "native-base";
+import Expo from "expo";
 
-import { DrawerNavigator,StackNavigator} from 'react-navigation';
-import home from './screen/home';
-import SideBar from './components/SideBar';
-import Extra from './screen/extra';
-import Tabscreen from './screen/tabs';
-
-//The main Drawer which takes in the other screen like tab scree,home screen
-
-const App = DrawerNavigator(
-    {
-        //screen routes and their names
-      HomeScreen:{
-          screen: home,
-          path:"/",
-      },
-      SideBarScreen:{
-        screen: SideBar,
-        path:"/side"
-      },
-      ExtraScreen:{
-          screen:Extra,
-          path:"/extra",
-      },
-      Tabs:{
-          screen: Tabscreen,
-          path: "/tabs",
-      },
-    },
-    {
-    initialRouteName:"Tabs",
-    contentComponent: props => <SideBar {...props} />
-    /*The custom sidebar is implemented by the customComponent for which the code 
-     is written in the SideBar.js*/
+//the main part of the project ,the entry point is the drawer navigator 
+import DrawerContents from "./screen/DrawerNav";
+export default class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      isReady: false
+    };
+  }
+  //for loading the custom fonts
+  async componentWillMount() {
+    await Expo.Font.loadAsync({
+      Roboto: require("native-base/Fonts/Roboto.ttf"),
+      Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf"),
+      Ionicons: require("native-base/Fonts/Ionicons.ttf")
+    });
+    this.setState({ isReady: true });
+  }
+  render() {
+    if (!this.state.isReady) {
+      return <Expo.AppLoading />;
     }
-);
-
-export default App;
-
-//Exporting the main final product
+    return <DrawerContents />;
+  }
+}
