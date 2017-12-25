@@ -52,6 +52,9 @@ Try the below steps for editing code:
 3. Go to the components folder so as the edit the components like header,footer,side bar.
 4. You can open the files ,in which they are info in the comments that help you to understand the lines of the code and their importance of them for the app which can be edited as per your like.
 
+Note
+1. In case of route.routename error,type the coommand "npm install react-navigation@1.0.0-beta.21" and then reopen
+
 ***********************************
 # Thanks for looking out the App
 # Hope you like it!! 
